@@ -11,6 +11,7 @@ abstract class Utils
 	const SNAKE               = 'my_plugin';
 	const DEFAULT_IMAGE       = 'http://1.gravatar.com/avatar/1c39955b5fe5ae1bf51a77642f052848?s=96&d=mm&r=g';
 	const GITHUB_REPO         = 'https://github.com/j7-dev/wp-plugin';
+	// const GITHUB_PAT = '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';
 
 	public static function get_plugin_dir(): string
 	{
