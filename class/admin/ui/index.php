@@ -60,8 +60,8 @@ class UI
 
 		\add_submenu_page(
 			'users.php',
-			__('會員等級', Utils::SNAKE),
-			__('會員等級', Utils::SNAKE),
+			__('會員等級', Utils::TEXT_DOMAIN),
+			__('會員等級', Utils::TEXT_DOMAIN),
 			'edit_users',
 			'edit.php?post_type=member_lv',
 			'',
