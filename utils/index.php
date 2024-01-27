@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace J7\MyPlugin;
 
-abstract class Utils
+class Utils
 {
 	const APP_NAME            = 'My Plugin';
 	const KEBAB               = 'my-plugin';
@@ -17,7 +17,7 @@ abstract class Utils
 
 	public static function get_plugin_dir(): string
 	{
-		$plugin_dir = \untrailingslashit(\wp_normalize_path(\plugin_dir_path(__DIR__ . '../')));
+		$plugin_dir = \untrailingslashit(\wp_normalize_path(ABSPATH . 'wp-content/plugins/wp-plugin'));
 		return $plugin_dir;
 	}
 
