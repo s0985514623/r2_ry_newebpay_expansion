@@ -4,7 +4,7 @@
  * Plugin Name:       My Plugin | 我的 WordPress 外掛
  * Plugin URI:        https://cloud.luke.cafe/plugins/
  * Description:       這是一個 WordPress 外掛的範本，可以用來開發新的外掛。
- * Version:           0.0.3
+ * Version:           0.0.4
  * Requires at least: 5.7
  * Requires PHP:      7.4
  * Author:            J7
@@ -29,7 +29,7 @@ if (!\class_exists('J7\MyPlugin\Plugin')) {
     {
         private static $instance;
 
-        public $plugins = [
+        public $required_plugins = [
             // [
             //     'name'     => 'WooCommerce',
             //     'slug'     => 'woocommerce',
@@ -41,6 +41,7 @@ if (!\class_exists('J7\MyPlugin\Plugin')) {
                 'slug'     => 'wp-toolkit',
                 'source'   => 'https://github.com/j7-dev/wp-toolkit/releases/latest/download/wp-toolkit.zip',
                 'required' => true,
+                'version'  => '0.3.1',
              ],
          ];
 
@@ -180,13 +181,13 @@ if (!\class_exists('J7\MyPlugin\Plugin')) {
                 ),
             );
 
-            call_user_func(__NAMESPACE__ . '\tgmpa', $this->plugins, $config);
+            call_user_func(__NAMESPACE__ . '\tgmpa', $this->required_plugins, $config);
         }
 
-        public function remove_notices(): void
-        {
-            \remove_action('admin_notices', array(\TGM_Plugin_Activation::$instance, 'notices'));
-        }
+        // public function required_plugins(): void
+        // {
+        //     \remove_action('admin_notices', array(\TGM_Plugin_Activation::$instance, 'notices'));
+        // }
 
         public function activate(): void
         {

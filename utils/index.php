@@ -6,10 +6,11 @@ namespace J7\MyPlugin;
 
 class Utils
 {
-    const APP_NAME    = 'My Plugin';
-    const KEBAB       = 'my-plugin';
-    const SNAKE       = 'my_plugin';
-    const TEXT_DOMAIN = self::SNAKE;
+    const PLUGIN_DIR_NAME = 'wp-plugin';
+    const APP_NAME        = 'My Plugin';
+    const KEBAB           = 'my-plugin';
+    const SNAKE           = 'my_plugin';
+    const TEXT_DOMAIN     = self::SNAKE;
 
     const DEFAULT_IMAGE = 'http://1.gravatar.com/avatar/1c39955b5fe5ae1bf51a77642f052848?s=96&d=mm&r=g';
     const GITHUB_REPO   = 'https://github.com/j7-dev/wp-plugin';
@@ -17,7 +18,7 @@ class Utils
 
     public static function get_plugin_dir(): string
     {
-        $plugin_dir = \untrailingslashit(\wp_normalize_path(ABSPATH . 'wp-content/plugins/wp-plugin'));
+        $plugin_dir = \untrailingslashit(\wp_normalize_path(ABSPATH . 'wp-content/plugins/' . self::PLUGIN_DIR_NAME));
         return $plugin_dir;
     }
 

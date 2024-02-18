@@ -899,13 +899,13 @@ if (!empty($this->message) && is_string($this->message)) {
 
                 if ('update' === $install_type) {
                     $skin_args[ 'plugin' ] = $this->plugins[ $slug ][ 'file_path' ];
-                    $skin                  = new Plugin_Upgrader_Skin($skin_args);
+                    $skin                  = new \Plugin_Upgrader_Skin($skin_args);
                 } else {
-                    $skin = new Plugin_Installer_Skin($skin_args);
+                    $skin = new \Plugin_Installer_Skin($skin_args);
                 }
 
                 // Create a new instance of Plugin_Upgrader.
-                $upgrader = new Plugin_Upgrader($skin);
+                $upgrader = new \Plugin_Upgrader($skin);
 
                 // Perform the action and install the plugin from the $source urldecode().
                 add_filter('upgrader_source_selection', array($this, 'maybe_adjust_source_dir'), 1, 3);
