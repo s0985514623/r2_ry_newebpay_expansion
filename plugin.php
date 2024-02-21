@@ -89,7 +89,7 @@ if (!\class_exists('J7\MyPlugin\Plugin')) {
                 Utils::KEBAB
             );
             $updateChecker->setBranch('master');
-            // $updateChecker->setAuthentication(Utils::GITHUB_PAT);
+            // $updateChecker->setAuthentication(Utils::get_github_pat());
             $updateChecker->getVcsApi()->enableReleaseAssets();
         }
 
