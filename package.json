@@ -7,7 +7,7 @@
     "bootstrap": "npm install && composer install --no-interaction",
     "dev": "vite",
     "prebuild": "echo 'todo: remove console'",
-    "build": "yarn build",
+    "build": "yarn build:main",
     "build:main": "vite build --config vite.config.js",
     "preview": "vite preview",
     "format": "prettier-eslint --write \"js/src/**/*.tsx\"",
