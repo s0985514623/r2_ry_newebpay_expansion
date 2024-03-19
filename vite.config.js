@@ -9,15 +9,15 @@ export default defineConfig({
   build: {
     emptyOutDir: true,
     minify: true,
-    outDir: path.resolve(__dirname, 'js/dist_product_tab'),
+    outDir: path.resolve(__dirname, 'js/dist'),
 
     // watch: {
-    //   include: 'js/src_product_tab/**',
-    //   exclude: 'node_modules/**, .git/**, dist_product_tab/**, .vscode/**',
+    //   include: 'js/src/**',
+    //   exclude: 'node_modules/**, .git/**, dist/**, .vscode/**',
     // },
 
     rollupOptions: {
-      input: 'js/src_product_tab/main.ts', // Optional, defaults to 'src/main.js'.
+      input: 'js/src/main.ts', // Optional, defaults to 'src/main.js'.
       output: {
         assetFileNames: 'assets/[ext]/index.[ext]',
         entryFileNames: 'index.js',
@@ -29,8 +29,8 @@ export default defineConfig({
     tsconfigPaths(),
     liveReload([
       __dirname + '/**/*.php',
-      __dirname + '/js/dist_product_tab/**/*',
-      __dirname + '/js/src_product_tab/**/*.tsx',
+      __dirname + '/js/dist/**/*',
+      __dirname + '/js/src/**/*.tsx',
     ]),
     optimizer({
       jquery: 'const $ = window.jQuery; export { $ as default }',
@@ -38,7 +38,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'js/src_product_tab'),
+      '@': path.resolve(__dirname, 'js/src'),
     },
   },
 })
