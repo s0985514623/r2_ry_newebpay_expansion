@@ -1,10 +1,34 @@
 {
-  "require": {
-    "yahnis-elsts/plugin-update-checker": "^5.3"
-  },
-  "autoload": {
-    "psr-4": {
-      "J7\\MyPlugin\\": "utils/"
+  "name": "j7-dev/wp-plugin",
+  "description": "",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-only",
+  "authors": [
+    {
+      "name": "J7",
+      "email": "j7.dev.gg@gmail.com"
     }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "require": {
+		"yahnis-elsts/plugin-update-checker": "^5.3"
+  },
+  "require-dev": {
+		"squizlabs/php_codesniffer": "@stable",
+    "wp-coding-standards/wpcs": "@stable",
+    "dealerdirect/phpcodesniffer-composer-installer": "@stable"
+  },
+  "scripts": {
+    "lint": "phpcs"
   }
 }
