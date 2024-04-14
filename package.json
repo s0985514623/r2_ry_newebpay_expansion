@@ -1,7 +1,7 @@
 {
   "name": "wp-plugin",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "bootstrap": "npm install && composer install --no-interaction",
@@ -36,6 +36,7 @@
     "@typescript-eslint/parser": "^5.48.1",
     "@vitejs/plugin-react": "^3.0.0",
     "@wordpress/eslint-plugin": "^14.0.0",
+    "archiver": "^7.0.1",
     "autoprefixer": "^10.4.13",
     "env-cmd": "^10.1.0",
     "eslint": "^8.34.0",
