@@ -2,8 +2,9 @@ import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import alias from '@rollup/plugin-alias'
 import path from 'path'
-import liveReload from 'vite-plugin-live-reload'
 import optimizer from 'vite-plugin-optimizer'
+
+// import liveReload from 'vite-plugin-live-reload'
 
 export default defineConfig({
   build: {
@@ -12,7 +13,7 @@ export default defineConfig({
     outDir: path.resolve(__dirname, 'js/dist'),
 
     // watch: {
-    //   include: 'js/src/**',
+    //   include: ['js/src/**', 'inc/**'],
     //   exclude: 'node_modules/**, .git/**, dist/**, .vscode/**',
     // },
 
@@ -27,11 +28,13 @@ export default defineConfig({
   plugins: [
     alias(),
     tsconfigPaths(),
-    liveReload([
-      __dirname + '/**/*.php',
-      __dirname + '/js/dist/**/*',
-      __dirname + '/js/src/**/*.tsx',
-    ]),
+
+    // liveReload([
+    //   __dirname + '/**/*.php',
+    //   __dirname + '/js/dist/**/*',
+    //   __dirname + '/js/src/**/*.tsx',
+    // ]), // Optional, if you want to reload page on php changed
+
     optimizer({
       jquery: 'const $ = window.jQuery; export { $ as default }',
     }),

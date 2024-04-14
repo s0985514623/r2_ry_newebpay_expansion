@@ -83,7 +83,16 @@
 		<exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
 	</rule>
 
-	<rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax">
+		<exclude name="Generic.Arrays.DisallowLongArraySyntax.Found"/>
+	</rule>
 
+	<rule ref="Universal.Arrays.DisallowShortArraySyntax">
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax.Found"/>
+	</rule>
+
+	<rule ref="Generic.Files.LineEndings">
+		<exclude name="Generic.Files.LineEndings.InvalidEOLChar"/>
+	</rule>
 
 </ruleset>

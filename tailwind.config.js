@@ -1,14 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 // eslint-disable-next-line no-undef
 module.exports = {
-  important: true,
   corePlugins: {
     preflight: false,
   },
 
   // prefix: 'tw-',
 
-  content: ['./js/src/**/*.{js,ts,jsx,tsx}', './**/*.{php, html, js, ts}'],
+  content: ['./js/src/**/*.{js,ts,jsx,tsx}', './inc/**/*.php'],
   theme: {
     extend: {
       colors: {

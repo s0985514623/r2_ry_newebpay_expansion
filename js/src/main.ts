@@ -1,5 +1,5 @@
-import $ from 'jquery'
-import './style.scss'
-$(function () {
-  console.log('Hello from main.ts')
-})
+import jQuery from 'jquery'
+import '@/assets/scss/index.scss'
+;(function ($) {
+  console.log('Hello wp-plugin')
+})(jQuery)
