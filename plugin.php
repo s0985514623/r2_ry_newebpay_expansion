@@ -5,12 +5,12 @@
  * Description:       這是一個 WordPress 外掛的範本，可以用來開發新的外掛。
  * Version:           3.0.0
  * Requires at least: 5.7
- * Requires PHP:      7.4
+ * Requires PHP:      8.
  * Author:            J7
  * Author URI:        https://github.com/j7-dev
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       power-partner-server
+ * Text Domain:       my_plugin
  * Domain Path:       /languages
  * Tags:
  */
