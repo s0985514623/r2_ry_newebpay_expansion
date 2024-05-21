@@ -12,10 +12,10 @@ export default defineConfig({
     minify: true,
     outDir: path.resolve(__dirname, 'js/dist'),
 
-    // watch: {
-    //   include: ['js/src/**', 'inc/**'],
-    //   exclude: 'node_modules/**, .git/**, dist/**, .vscode/**',
-    // },
+    watch: {
+      include: ['js/src/**', 'inc/**'],
+      exclude: 'node_modules/**, .git/**, dist/**, .vscode/**',
+    },
 
     rollupOptions: {
       input: 'js/src/main.ts', // Optional, defaults to 'src/main.js'.

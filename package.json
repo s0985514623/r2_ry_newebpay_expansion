@@ -1,7 +1,7 @@
 {
-  "name": "wp-plugin",
+  "name": "r2_ry_newebpay_expansion",
   "private": true,
-  "version": "3.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "bootstrap": "npm install && composer install --no-interaction",

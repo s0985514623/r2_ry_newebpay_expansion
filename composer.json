@@ -1,13 +1,13 @@
 {
-  "name": "j7-dev/wp-plugin",
-  "description": "This is a boilerplate for creating a WordPress plugin with vite",
+  "name": "r2-dev/r2_ry_newebpay_expansion",
+  "description": "這是一個針對Ry藍新信用卡的擴充外掛，可以為每個分期期數增加最低金額限制。",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-only",
   "authors": [
     {
-      "name": "JerryLiu",
-      "email": "j7.dev.gg@gmail.com",
-      "homepage": "https://github.com/j7-dev",
+      "name": "Ren",
+      "email": "s0985514623@gmail.com",
+      "homepage": "https://github.com/s0985514623",
       "role": "Developer"
     }
   ],

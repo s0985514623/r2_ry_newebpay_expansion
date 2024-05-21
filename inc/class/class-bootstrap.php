@@ -5,7 +5,7 @@
 
 declare (strict_types = 1);
 
-namespace J7\WpPlugin;
+namespace R2\WpPlugin;
 
 use Micropackage\Singleton\Singleton;
 
