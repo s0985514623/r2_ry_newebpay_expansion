@@ -3,7 +3,7 @@
  * Plugin Name:       R2_RY藍新信用卡擴充外掛
  * Plugin URI:        https://cloud.luke.cafe/plugins/
  * Description:       這是一個針對Ry藍新信用卡的擴充外掛，可以為每個分期期數增加最低金額限制。
- * Version:           1.0.0
+ * Version:           1.0.2
  * Requires at least: 5.7
  * Requires PHP:      8.0
  * Requires Plugins:   ry-woocommerce-tools
