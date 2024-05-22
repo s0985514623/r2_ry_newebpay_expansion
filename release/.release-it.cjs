@@ -11,7 +11,7 @@
  * @see https://github.com/release-it/release-it/blob/main/docs/configuration.md
  */
 
-const releasedPluginName = 'wp-plugin'
+const releasedPluginName = 'r2-ry-newebpay-expansion'
 
 module.exports = {
   releasedPluginName,
@@ -54,5 +54,6 @@ module.exports = {
     'index.php',
     'plugin.php',
     'README.md',
+    'vendor',
   ],
 }
