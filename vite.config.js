@@ -9,7 +9,12 @@ import optimizer from 'vite-plugin-optimizer'
 export default defineConfig({
   build: {
     emptyOutDir: true,
-    minify: true,
+    minify: 'testers',
+    tserserOptions: {
+      mangle: {
+        reserved: ['$'],
+      },
+    },
     outDir: path.resolve(__dirname, 'js/dist'),
 
     watch: {
@@ -18,10 +23,13 @@ export default defineConfig({
     },
 
     rollupOptions: {
-      input: 'js/src/main.ts', // Optional, defaults to 'src/main.js'.
+      input: {
+        admin: 'js/src/admin.ts',
+        frontend: 'js/src/frontend.ts',
+      },
       output: {
         assetFileNames: 'assets/[ext]/index.[ext]',
-        entryFileNames: 'index.js',
+        entryFileNames: 'index-[name].js',
       },
     },
   },
@@ -36,7 +44,7 @@ export default defineConfig({
     // ]), // Optional, if you want to reload page on php changed
 
     optimizer({
-      jquery: 'const $ = window.jQuery; export { $ as default }',
+      jquery: 'const $ = window.jQuery; export default $ ',
     }),
   ],
   resolve: {

@@ -24,7 +24,6 @@ final class Bootstrap extends Singleton {
 		require_once __DIR__ . '/front-end/index.php';
 
 		\add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_script' ), 99 );
-		\add_action( 'wp_enqueue_scripts', array( $this, 'frontend_enqueue_script' ), 99 );
 	}
 
 	/**
@@ -36,31 +35,22 @@ final class Bootstrap extends Singleton {
 	 * @return void
 	 */
 	public function admin_enqueue_script( $hook ): void {
-		$this->enqueue_script();
+		$this->enqueue_admin_script();
 	}
 
 
+
 	/**
-	 * Front-end Enqueue script
+	 * Enqueue admin script
 	 * You can load the script on demand
 	 *
 	 * @return void
 	 */
-	public function frontend_enqueue_script(): void {
-		$this->enqueue_script();
-	}
-
-	/**
-	 * Enqueue script
-	 * You can load the script on demand
-	 *
-	 * @return void
-	 */
-	public function enqueue_script(): void {
+	public function enqueue_admin_script(): void {
 
 		\wp_enqueue_script(
 			Plugin::KEBAB,
-			Plugin::$url . '/js/dist/index.js',
+			Plugin::$url . '/js/dist/index-admin.js',
 			array( 'jquery' ),
 			Plugin::$version,
 			array(
