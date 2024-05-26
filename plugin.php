@@ -34,7 +34,7 @@ if ( ! \class_exists( 'R2\WpPlugin\Plugin' ) ) {
 		const APP_NAME    = 'R2 RY Newebpay Expansion';
 		const KEBAB       = 'r2-ry-newebpay-expansion';
 		const SNAKE       = 'r2_ry_newebpay_expansion';
-		const GITHUB_REPO = 'https://github.com/s0985514623/r2_ry_newebpay_expansion.git';
+		const GITHUB_REPO = 'https://github.com/s0985514623/r2_ry_newebpay_expansion';
 
 		/**
 		 * Github Personal Access Token
