@@ -33,7 +33,7 @@ final class Entry extends Singleton {
 		}
 		// 註冊前端腳本
 		\wp_enqueue_script(
-			Plugin::KEBAB,
+			Plugin::KEBAB . '_frontend',
 			Plugin::$url . '/js/dist/index-frontend.js',
 			array( 'jquery' ),
 			Plugin::$version,

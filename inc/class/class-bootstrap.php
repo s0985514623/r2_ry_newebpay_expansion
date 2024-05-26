@@ -24,6 +24,18 @@ final class Bootstrap extends Singleton {
 		require_once __DIR__ . '/front-end/index.php';
 
 		\add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_script' ), 99 );
+		\add_filter(
+			'script_loader_tag',
+			function ( $tag, $handle, $src ) {
+				if ( Plugin::KEBAB . '_admin' === $handle || Plugin::KEBAB . '_frontend' === $handle ) {
+					// phpcs:ignore.
+					$tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
+				}
+				return $tag;
+			},
+			10,
+			3
+		);
 	}
 
 	/**
@@ -49,7 +61,7 @@ final class Bootstrap extends Singleton {
 	public function enqueue_admin_script(): void {
 
 		\wp_enqueue_script(
-			Plugin::KEBAB,
+			Plugin::KEBAB . '_admin',
 			Plugin::$url . '/js/dist/index-admin.js',
 			array( 'jquery' ),
 			Plugin::$version,

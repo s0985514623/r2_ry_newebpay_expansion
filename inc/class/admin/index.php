@@ -45,6 +45,7 @@ final class Expansion extends Singleton {
 				'title' => __( '各期數最小金額' ),
 				'type'  => 'title',
 				'id'    => 'r2_ry_newebpay_expansion',
+				'desc'  => __( '欲啟用此功能請先輸入最小訂購金額', 'r2_ry_newebpay_expansion' ),
 			),
 		);
 		foreach ( $periods as $period ) {
@@ -54,9 +55,10 @@ final class Expansion extends Singleton {
 				// translators: %d represents the number of periods.
 				'title'             => sprintf( __( '%d 期', 'r2_ry_newebpay_expansion' ), $period ),
 				'type'              => 'number',
-				'default'           => 0,
+				'default'           => $min_amount,
 				'placeholder'       => 0,
-				'class'             => 'r2_newebpay_' . $period . '_of_periods',
+				'class'             => $period . '_of_periods r2_newebpay_of_periods',
+				'desc'              => __( '請輸入此期數的最小金額', 'r2_ry_newebpay_expansion' ),
 				'custom_attributes' => array(
 					'min'  => $min_amount,
 					'max'  => $max_amount,

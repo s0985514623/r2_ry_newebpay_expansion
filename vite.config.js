@@ -8,12 +8,12 @@ import optimizer from 'vite-plugin-optimizer'
 export default defineConfig({
   build: {
     emptyOutDir: true,
-    minify: 'terser',
-    terserOptions: {
-      mangle: {
-        reserved: ['$'],
-      },
-    },
+    // minify: 'terser',
+    // terserOptions: {
+    //   mangle: {
+    //     reserved: ['$'],
+    //   },
+    // },
     outDir: path.resolve(__dirname, 'js/dist'),
 
     watch: {
