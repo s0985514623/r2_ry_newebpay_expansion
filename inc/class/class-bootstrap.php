@@ -48,16 +48,16 @@ final class Bootstrap extends Singleton {
 	 */
 	public function enqueue_admin_script(): void {
 
-		// \wp_enqueue_script(
-		// Plugin::KEBAB,
-		// Plugin::$url . '/js/dist/index-admin.js',
-		// array( 'jquery' ),
-		// Plugin::$version,
-		// array(
-		// 'in_footer' => true,
-		// 'strategy'  => 'async',
-		// )
-		// );
+		\wp_enqueue_script(
+			Plugin::KEBAB,
+			Plugin::$url . '/js/dist/index-admin.js',
+			array( 'jquery' ),
+			Plugin::$version,
+			array(
+				'in_footer' => true,
+				'strategy'  => 'async',
+			)
+		);
 
 		// \wp_enqueue_style(
 		// Plugin::KEBAB,

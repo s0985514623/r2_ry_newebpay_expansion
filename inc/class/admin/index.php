@@ -32,7 +32,8 @@ final class Expansion extends Singleton {
 
 		// 取得分期期數
 		$get_settings = \get_option( 'woocommerce_ry_newebpay_credit_installment_settings', array() );
-		$periods      = $get_settings['number_of_periods'];
+		// $periods      = $get_settings['number_of_periods'];
+		$periods = array( 3, 6, 12, 18, 24, 30 );
 		// 取得最小訂購金額
 		$min_amount = $get_settings['min_amount'];
 		// 取得最大訂購金額
@@ -55,7 +56,7 @@ final class Expansion extends Singleton {
 				'type'              => 'number',
 				'default'           => 0,
 				'placeholder'       => 0,
-				'class'             => 'r2_newebpay_number_of_periods',
+				'class'             => 'r2_newebpay_' . $period . '_of_periods',
 				'custom_attributes' => array(
 					'min'  => $min_amount,
 					'max'  => $max_amount,
