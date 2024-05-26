@@ -16,10 +16,10 @@ export default defineConfig({
     // },
     outDir: path.resolve(__dirname, 'js/dist'),
 
-    watch: {
-      include: ['js/src/**', 'inc/**'],
-      exclude: 'node_modules/**, .git/**, dist/**, .vscode/**',
-    },
+    // watch: {
+    //   include: ['js/src/**', 'inc/**'],
+    //   exclude: 'node_modules/**, .git/**, dist/**, .vscode/**',
+    // },
 
     rollupOptions: {
       input: {
