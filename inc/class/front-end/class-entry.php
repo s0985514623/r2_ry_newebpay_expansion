@@ -61,7 +61,7 @@ final class Entry extends Singleton {
 
 		// 腳本塞入資料.
 		\wp_localize_script(
-			Plugin::KEBAB,
+			Plugin::KEBAB . '_frontend',
 			Plugin::SNAKE . '_data',
 			array(
 				'number_of_periods' => $periods_amount,
