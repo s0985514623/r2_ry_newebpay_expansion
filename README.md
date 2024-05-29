@@ -1,52 +1,15 @@
-# My Plugin | 我的 WordPress 外掛
-一句話講完 My Plugin :
+# R2 RY Newebpay Expansion | 針對Ry藍新信用卡分期的擴充外掛
+一句話講完 R2 RY Newebpay Expansion :
 
-> 這是一個 WordPress 外掛的範本，可以用來開發新的外掛。
-
-<br><br><br>
-
-## ⚡ 主要功能
-
-#### 1. 整合 TGM Plugin
-
-功能: 方便你依賴其他外掛，詳情可以參考[說明](http://tgmpluginactivation.com/configuration/)
+> 可以為每個分期期數增加最低金額限制。
 
 <br><br><br>
 
-#### 2. 整合 plugin-update-checker
+## 使用方法
 
-功能: 當你在 github release 時，可以自動通知使用者更新，詳情可以參考[說明](https://github.com/YahnisElsts/plugin-update-checker)
+#### 前往WC 藍新信用卡（分期）金流設定頁面
+<img src="https://github.com/s0985514623/r2_ry_newebpay_expansion/assets/35906564/4bb324ae-e91a-4dec-a3ba-5e5417ee6f65">
+<img src="https://github.com/s0985514623/r2_ry_newebpay_expansion/assets/35906564/3ffae1dc-b0ab-4fbe-8e3a-7a5d2661680f">
 
-<br><br><br>
-
-## 用法
-
-#### 請先執行 composer install 安裝依賴
-
-<br><br><br>
-
-#### 如果你依賴多個 plugins ，需要在 `check_required_plugins` 判斷是否都已經啟用
-
-```php
-public function check_required_plugins()
-{
-	self::$is_all_plugins_activated = \class_exists(self::WOOCOMMERCE_CLASS);
-
-	if (self::$is_all_plugins_activated) {
-		new Bootstrap();
-	}
-}
-```
-
-<br><br><br>
-
-#### 在 Utils 定義常數
-
-```php
-const APP_NAME            = 'My Plugin';
-const KEBAB               = 'my-plugin';
-const SNAKE               = 'my_plugin';
-const GITHUB_REPO         = 'https://github.com/j7-dev/wp-plugin';
-```
-
-<br><br><br>
+#### 前台顯示
+<img src="https://github.com/s0985514623/r2_ry_newebpay_expansion/assets/35906564/780097f1-f58a-4aea-98b1-51ed75ef50b9">
